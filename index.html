@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio&family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./app.js" defer></script>
+    <title>The planets</title>
+</head>
+<body>
+    <header class="header container">
+        <h1>
+            <a href="./index.html">THE PLANETS</a>
+        </h1>
+
+        <div class="menu-btn">
+        </div>
+          
+          <nav class="menu open">
+            <ul class="menu-items">
+              <li>
+                  <a href="#">
+                      Mercury
+                      <img src="./assets/mobile-icon/Path 3.png" alt="">
+                  </a>
+              </li>
+              <li><a href="#">Venus
+                  <img src="./assets/mobile-icon/Path 3.png" alt=""></a>
+              </li>
+              <li><a href="#">Earth<img src="./assets/mobile-icon/Path 3.png" alt=""></a></li>
+              <li><a href="#">Mars<img src="./assets/mobile-icon/Path 3.png" alt=""></a></li>
+              <li><a href="#">Jupiter<img src="./assets/mobile-icon/Path 3.png" alt=""></a></li>
+              <li><a href="#">Saturn<img src="./assets/mobile-icon/Path 3.png" alt=""></a></li>
+              <li><a href="#">Uranus<img src="./assets/mobile-icon/Path 3.png" alt=""></a></li>
+              <li><a href="#">Neptune<img src="./assets/mobile-icon/Path 3.png" alt=""></a></li>
+            </ul>
+          </nav>
+
+        <nav class="navigation">
+            <ul class="nav_element">
+                <li><button class="nav_mercury">mercury</button></li>
+                <li><button class="nav_venus">venus</button></li>
+                <li><button class="nav_earth">earth</button></li>
+                <li><button class="nav_mars">mars</button></li>
+                <li><button class="nav_jupiter">jupiter</button></li>
+                <li><button class="nav_saturn">saturn</button></li>
+                <li><button class="nav_uranus">uranus</button></li>
+                <li><button class="nav_neptune">neptune</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container planet mercury">
+        <div class="planet__bg"></div>
+
+        <section class="planet__content" id="planet__content">
+            <!-- <div class="planet__content-info">
+                <h2 class="planet__content-title">mercury</h2>
+                <p class="planet__content-text">Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest of all the Sun's planets. Mercury is one of four terrestrial planets in the Solar System, and is a rocky body like Earth.</p>
+                <div class="planet__content-source">Source: <a href="" target="_blank">Wikipedia </a></div>
+            </div> -->
+            <article id="planet__info"></article>
+            <ul class="planet__content-menu desctop">
+                <li class="planet__content-item active"><span>01</span>OVERVIEW</li>
+                <li class="planet__content-item hidden-content"><span>02</span>Internal Structure</li>
+                <li class="planet__content-item hidden"><span>03</span>Surface Geology</li>
+            </ul>
+        
+        </section>
+    </main>
+
+    <footer class="footer container">
+        <article class="footer_item">
+            <h3 class="footer_item-title">ROTATION TIME</h3>
+            <p class="footer_item-info" id="rotation"></p>
+        </article>
+        <article class="footer_item">
+            <h3 class="footer_item-title">REVOLUTION TIME</h3>
+            <p class="footer_item-info" id="revolution"></p>
+        </article>
+        <article class="footer_item">
+            <h3 class="footer_item-title">radius</h3>
+            <p class="footer_item-info" id="radius"></p>
+        </article>
+        <article class="footer_item">
+            <h3 class="footer_item-title">AVERAGE TEMP.</h3>
+            <p class="footer_item-info" id="temp"></p>
+        </article>
+    </footer>
+
+</body>
+</html>

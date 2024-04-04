@@ -1,0 +1,566 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container {
+    max-width: 1440px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+}
+
+body {
+    background: #070724;
+    background-image: url(./assets/bg/background-stars.svg);
+    background-position: center center;
+    color: #fff;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 40px 27px 32px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+    font-family: "Antonio", sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+}
+.menu-btn {
+    display: none;
+    width: 24px;
+    height: 17px;
+    border: none;
+    background-color: transparent;
+    border-top: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    position: absolute;
+    right: 24px;
+}
+
+.menu-btn:before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 3px;
+    background-color: #fff;
+    top: 4px;
+    left: 0;
+}
+
+.menu {
+    display: none;
+}
+  
+.navigation ul {
+    display: flex;
+    align-items: center;
+    gap: 33px;
+}
+.nav_element {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 227%;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    border-top: 4px solid transparent;
+    transition: border-color 0.5s ease-in;
+    cursor: pointer;
+}
+
+li > button {
+    background: transparent;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 227%;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-top: 4px solid transparent;
+}
+.nav_mercury:hover {
+    border-color: #419ebb;
+}
+.nav_venus:hover {
+    border-color: #eda249;
+}
+
+.nav_earth:hover {
+    border-color: #6D2ED5;
+}
+.nav_mars:hover {
+    border-color: #d14c32;
+}
+.nav_jupiter:hover {
+    border-color: #d83a34;
+}
+.nav_saturn:hover {
+    border-color: #cd5120;
+}
+.nav_uranus:hover {
+    border-color: #1ec1a2;
+}
+.nav_neptune:hover {
+    border-color: #2d68f0;
+}
+
+.planet {
+    display: flex;
+    align-items: center;
+    gap: 96px;
+    flex-wrap: wrap;
+    padding-top: 126px;
+    padding-bottom: 87px;
+    /* max-width: 1140px; */
+    /* margin: 0 auto; */
+    /* justify-content: space-between; */
+}
+.planet__bg {
+    /* padding-left: 170px; */
+    max-width: 666px;
+    width: 100%;
+    height: 666px;
+    position: relative;
+}
+.mercury .planet__bg{
+    background-image: url(./assets/img/planet-mercury.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.mercury .planet__bg-structure {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+}
+  
+.mercury .planet__bg-geology {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,81px);
+    display: none;
+}
+
+
+.planet__content {
+    max-width: 350px;
+}
+.planet__content-title {
+    font-family: "Antonio", sans-serif;
+    font-weight: 400;
+    font-size: 80px;
+    text-transform: uppercase;
+    margin-bottom: 23px;
+}
+.planet__content-text {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 179%;
+    margin-bottom: 24px;
+    width: 275px;
+}
+.planet__content-source {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 179%;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 39px;
+}
+.planet__content-source a {
+    color: rgba(255, 255, 255, 0.5);
+    padding-right: 19px;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    background-image: url(./assets/icon/icon-source.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+/* .planet__content-source a > img {
+    padding-left: 8px;
+    padding-top: 1px;
+    opacity: 1;
+} */
+
+.planet__content-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.planet__content-item, label {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    padding: 12px 84px 11px 28px;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 208%;
+    letter-spacing: 0.21em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.planet__content-item:hover, label:hover {
+    background: rgba(216, 216, 216, 0.2);
+    border: 1px solid rgba(216, 216, 216, 0.2);
+}
+.planet__content-item span, label span {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 208%;
+    letter-spacing: 0.21em;
+    text-transform: uppercase;
+    opacity: 0.5;
+    padding-right: 25px;
+}
+
+/* input[type="radio"] {
+    display: none;
+} */
+/* label + input[type="radio"]:checked{
+    background: #419ebb;
+    border: 1px solid #419ebb;
+} */
+.active {
+    background: #419ebb;
+    border: 1px solid #419ebb;
+}
+.footer {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-bottom: 56px;
+}
+.footer_item {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* padding: 20px 104px 27px 23px; */
+    width: 252px;
+    padding-top: 20px;
+    padding-bottom: 27px;
+    padding-left: 23px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.footer_item-title {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 227%;
+    letter-spacing: 0.09em;
+    opacity: 0.5;
+    text-transform: uppercase;
+    /* margin-bottom: 4px; */
+}
+.footer_item-info {
+    font-family: "Antonio", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+}
+
+@media (min-width: 831px) and (max-width: 1145px) {
+    .planet {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        padding-top: 27px;
+    }
+    .footer {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 830px) {
+    .container {
+        max-width: 768px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .header {
+        flex-direction: column;
+        gap: 39px;
+        /* padding: 32px 0px 27px 0px; */
+        padding-top: 32px;
+        padding-bottom: 27px;
+    }
+    .planet {
+        max-width: 768px;
+        /* padding-left: 40px;
+        padding-right: 40px; */
+        padding-top: 27px;
+        padding-bottom: 11px;
+        justify-content: center;
+        flex-direction: column;
+        gap: 11px;
+    }
+    .planet__bg {
+        max-width: 422px;
+        width: 100%;
+        height: 422px;
+    }
+    .mercury .planet__bg{
+        background-size: 340px;
+    }
+    .planet__content {
+        max-width: 690px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 80px;
+    }
+    .planet__content-info {
+        width: 339px;
+    }
+    .planet__content-title {
+        font-style: 48px;
+    }
+    .planet__content-text {
+        width: 339px;
+        font-size: 11px;
+        line-height: 200%;
+        margin-bottom: 32px;
+    }
+    .planet__content-source {
+        font-size: 12px;
+        line-height: 208%;
+    }
+    .planet__content-item {
+        padding: 8px 87px 7px 20px;
+        font-size: 9px;
+        line-height: 278%;
+    }
+    .planet__content-item span {
+        padding-right: 14px;
+    }
+    .footer {
+        gap: 10px;
+        padding-bottom: 36px;
+    }
+    .footer_item {
+        width: 164px;
+        padding-top: 16px;
+        padding-bottom: 19px;
+        padding-left: 15px;
+        gap: 6px;
+    }
+    .footer_item-title {
+        font-size: 8px;
+        line-height: 200%;
+        /* margin-bottom: 6px; */
+    }
+    .footer_item-info {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 660px) {
+    .container {
+        max-width: 640px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .header {
+        flex-direction: row;
+        position: relative;
+        gap: 39px;
+        padding-top: 32px;
+        padding-bottom: 27px;
+    }
+    .navigation ul {
+        display: none;
+    }
+    .menu-btn {
+        display: flex;
+    }
+    .menu {
+        /* display: none; */
+        position: absolute;
+        top: 69px;
+        left: 0;
+        width: 100%;
+        background: #070724;
+        padding: 44px 24px 67px 24px;
+        z-index: 99;
+    }
+      
+    .menu-items {
+        list-style-type: none;
+        padding: 0;
+    }
+      
+    .menu-items li {
+        margin-bottom: 10px;
+        border-bottom: 1px solid #979797;
+        width: 100%;
+        margin-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 25px;
+    }
+    
+    .menu-items li:nth-child(1) {
+        background-image: url(./assets/mobile-icon/mercury.png);
+        background-repeat: no-repeat;
+    }
+    .menu-items li:nth-child(2) {
+        background-image: url(./assets/mobile-icon/venus.png);
+        background-repeat: no-repeat;
+    }
+    .menu-items li:nth-child(3) {
+        background-image: url(./assets/mobile-icon/earth.png);
+        background-repeat: no-repeat;
+    }
+    .menu-items li:nth-child(4) {
+        background-image: url(./assets/mobile-icon/mars.png);
+        background-repeat: no-repeat;
+    }
+    .menu-items li:nth-child(5) {
+        background-image: url(./assets/mobile-icon/jupiter.png);
+        background-repeat: no-repeat;
+    }
+    .menu-items li:nth-child(6) {
+        background-image: url(./assets/mobile-icon/saturn.png);
+        background-repeat: no-repeat;
+    }
+    .menu-items li:nth-child(7) {
+        background-image: url(./assets/mobile-icon/uranus.png);
+        background-repeat: no-repeat;
+    }
+    
+    .menu-items li:nth-child(8) {
+        background-image: url(./assets/mobile-icon/neptune.png);
+        background-repeat: no-repeat;
+        border-bottom: none;
+    }
+      
+    .menu-items li a {
+        text-decoration: none;
+        color: #FFFFFF;
+        padding-left: 25px;
+        padding-right: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+    }
+      
+    .menu.open {
+        display: block;
+    }
+      
+    .menu.open .menu-items {
+        display: block;
+    }
+    .planet {
+        max-width: 640px;
+        padding-top: 74px;
+        padding-bottom: 28px;
+        position: relative;
+        gap: 24px;
+    }
+    .planet__bg {
+        max-width: 256px;
+        width: 100%;
+        height: 256px;
+    }
+    .mercury .planet__bg{
+        /* background-image: url(./assets/img/planet-mercury.svg); */
+        background-size: 200px;
+    }
+    .planet__content-info {
+        width: 327px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .planet__content-title {
+        margin-bottom: 16px;
+        font-style: 40px;
+    }
+    .planet__content-text {
+        width: 327px;
+        text-align: center;
+    }
+
+    .planet__content-menu  {
+        position: absolute;
+        top: 0;
+        left: 0;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        gap: 43px;
+        width: 100%;
+    }
+    .planet__content-item {
+        border: none;
+        padding: 20px 0px 17px 0px;
+        font-size: 9px;
+        letter-spacing: 0.21em;
+        width: 80px;
+        overflow: hidden; /* Приховує зайвий текст */
+        white-space: nowrap; /* Забороняє текстовому блоку переносити текст на новий рядок */
+    }
+
+    .hidden-content {
+        width: 64px;
+    }
+
+    .hidden {
+        width: 53px;
+    }
+
+    .active {
+        background: transparent;
+        border: none;
+        border-bottom: 4px solid #419ebb;
+    }
+
+    .planet__content-item span {
+        display: none;
+    }
+    .footer {
+        flex-direction: column;
+        gap: 8px;
+        padding-bottom: 47px;
+    }
+    .footer_item {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 327px;
+        padding: 9px 24px 13px 24px;
+    }
+    .footer_item-info {
+        font-size: 20px;
+    }
+}
